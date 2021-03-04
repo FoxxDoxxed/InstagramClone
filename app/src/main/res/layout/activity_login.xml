@@ -2,23 +2,32 @@
 <!-- 3b. copied all differences from video such as changing orientation to vertical,
 changing names of android:id's, constraints, prompt email and prompt username,
 changing values of layout width, weight & android:text. of edit texts and button-->
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linlayout"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:layout_margin="16dp"
     android:orientation="vertical"
+    app:layout_constrainedHeight="false"
+    app:layout_constrainedWidth="false"
     tools:context=".LoginActivity">
 
     <!--2d. changed the names of the android:id's & constraints of the edit texts and button to match login activity -->
     <!--3b. reflected change from strings.xml (prompt_email to prompt_username in here-->
+
+    <ImageView
+        android:id="@+id/ivLogo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/nav_logo_whiteout"
+        tools:srcCompat="@drawable/nav_logo_whiteout" />
+
     <EditText
         android:id="@+id/etUsername"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
         android:ems="10"
         android:hint="@string/prompt_username" />
 
@@ -26,21 +35,18 @@ changing values of layout width, weight & android:text. of edit texts and button
         android:id="@+id/etPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
         android:ems="10"
         android:hint="@string/prompt_password"
-        android:inputType="textPassword"
-        />
+        android:inputType="textPassword" />
+
 
     <Button
         android:id="@+id/btnLogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="@string/action_sign_in" />
-
-
-
+        android:backgroundTint="#2196F3"
+        android:text="@string/action_sign_in"
+        app:cornerRadius="30px" />
 
     <ProgressBar
         android:id="@+id/loading"
@@ -52,4 +58,5 @@ changing values of layout width, weight & android:text. of edit texts and button
         android:layout_marginEnd="32dp"
         android:layout_marginBottom="64dp"
         android:visibility="gone" />
+
 </LinearLayout>

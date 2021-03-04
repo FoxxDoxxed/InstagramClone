@@ -19,7 +19,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:usesCleartextTraffic="true"
         android:supportsRtl="true"
-        android:theme="@style/Theme.InstagramClone">
+        android:theme="@style/Theme.InstagramClone"
+        >
 
         <!-- make sure within the application tag, otherwise app will crash with XmlResourceParser errors -->
         <provider
